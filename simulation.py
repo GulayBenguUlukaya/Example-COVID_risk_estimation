@@ -4,6 +4,10 @@ Created on Mon Apr  5 15:20:54 2021
 
 @author: chait
 """
+import cProfile
+
+with cProfile.Profile() as pr:
+   
 
 import matplotlib.pyplot as plt
 import numpy as np
@@ -673,3 +677,5 @@ for i in range(len(inf_num)):
     if inf_num[i] >= 10**7/10**9:
         num_infected += 1
 print(num_infected)
+
+pr.print_stats()
